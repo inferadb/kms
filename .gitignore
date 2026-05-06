@@ -1,2 +1,47 @@
-/docs/superpowers/
+# Rust build artifacts
 /target/
+Cargo.lock.bak
+*.rs.bk
+
+# Local Cargo overrides
+.cargo/config.toml.local
+
+# Editor / IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+.DS_Store
+
+# Coverage
+*.profraw
+*.profdata
+lcov.info
+tarpaulin-report.html
+
+# Per-developer Claude Code overrides
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# Local KMS data dirs (dev / test)
+/data/
+/var/
+/tmp-kms/
+
+# Keys / certs that escape the test fixtures
+*.pem
+*.key
+*.crt
+!/tests/**/fixtures/**/*.pem
+!/tests/**/fixtures/**/*.crt
+!/tests/**/fixtures/**/*.key
+
+# Generated docs
+/site/
+
+# Plans
+/docs/superpowers/
+
+# Logs
+*.log
